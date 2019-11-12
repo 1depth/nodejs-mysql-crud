@@ -4,7 +4,7 @@ var app = express()
 var mysql = require('mysql')
 
 /**
- * change test git ignoreß
+ * change test git ignoreß 이것만 바뀌어야하는거야 
  * This middleware provides a consistent API 
  * for MySQL connections during request/response life cycle
  */ 
