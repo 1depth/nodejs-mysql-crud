@@ -1,0 +1,48 @@
+<!--
+including header content which is common for all pages
+-->
+<%- include ../layouts/header.ejs %>	
+
+<% if (messages.error) { %>
+	<p style="color:red"><%- messages.error %></p>
+<% } %>
+
+<% if (messages.success) { %>
+	<p style="color:green"><%- messages.success %></p>
+<% } %>
+
+<form action="/items/add" method="post" name="form1">
+	<table width="25%" border="0">
+		<tr> 
+			<td>상품명</td>
+			<td><input type="text" name="item_name" id="item_name" value="<%= item_name %>" /></td>
+		</tr>
+		<tr> 
+			<td>모델명</td>
+			<td><input type="text" name="item_model" id="item_model" value="<%= item_model %>" /></td>
+		</tr>
+
+		<tr> 
+			<td>파레트당 박스수량</td>
+			<td><input type="text" name="item_BIP" value="<%= item_BIP %>" /></td>
+		</tr>
+		<tr> 
+			<td>박스당 입수량</td>
+			<td><input type="text" name="item_QIB" value="<%= item_QIB %>" /></td>
+		</tr>
+
+		<tr> 
+			<td>중량</td>
+			<td><input type="text" name="item_BoxWeight" value="<%= item_BoxWeight %>" /></td>
+		</tr>
+		<tr> 
+			<td></td>
+			<td><input type="submit" name="Submit" value="Add" /></td>
+		</tr>
+	</table>
+</form>
+
+<!--
+including footer content which is common for all pages
+-->
+<%- include ../layouts/footer.ejs %>
